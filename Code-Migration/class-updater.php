@@ -405,7 +405,7 @@ class ClassUpdater extends Nette\Object
 					$class = str_replace('\\\\', '\\', $m[2], $double);
 					if (isset($that->replaces[strtolower($class)])) {
 						$class = $that->replaces[strtolower($class)];
- 						$parser->replace($m[1] . str_replace('\\', $double ? '\\\\' : '\\', $class) . $m[3]);
+						$parser->replace($m[1] . str_replace('\\', $double ? '\\\\' : '\\', $class) . $m[3]);
 					}
 				}
 
