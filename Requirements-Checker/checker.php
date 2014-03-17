@@ -23,7 +23,7 @@ foreach (array('function_exists', 'version_compare', 'extension_loaded', 'ini_ge
 /**
  * Check assets folder, template file must be readable
  */
-define('TEMPLATE_FILE', __DIR__ . '/assets/checker.phtml');
+define('TEMPLATE_FILE', dirname(__FILE__) . '/assets/checker.phtml');
 if (!is_readable(TEMPLATE_FILE)) {
 	die('Error: template file is not readable. Check assets folder (part of distribution), it should be present, readable and contain readable template file.');
 }
@@ -35,7 +35,7 @@ if (!is_readable(TEMPLATE_FILE)) {
  */
 $tests[] = array(
 	'title' => 'Web server',
-	'message' => $_SERVER['SERVER_SOFTWARE'],
+	'message' => isset($_SERVER['SERVER_SOFTWARE']) ? $_SERVER['SERVER_SOFTWARE'] : 'unknown',
 );
 
 $tests[] = array(
