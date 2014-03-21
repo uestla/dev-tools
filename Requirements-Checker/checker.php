@@ -134,6 +134,12 @@ $tests[] = array(
 );
 
 $tests[] = array(
+	'title' => 'JSON extension',
+	'required' => TRUE,
+	'passed' => extension_loaded('json'),
+);
+
+$tests[] = array(
 	'title' => 'PHP tokenizer',
 	'required' => TRUE,
 	'passed' => extension_loaded('tokenizer'),
