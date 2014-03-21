@@ -134,6 +134,19 @@ $tests[] = array(
 );
 
 $tests[] = array(
+	'title' => 'JSON extension',
+	'required' => TRUE,
+	'passed' => extension_loaded('json'),
+);
+
+$tests[] = array(
+	'title' => 'Fileinfo extension',
+	'required' => FALSE,
+	'passed' => extension_loaded('fileinfo'),
+	'description' => 'Fileinfo extension is absent. You will not be able to detect content-type of uploaded files.',
+);
+
+$tests[] = array(
 	'title' => 'PHP tokenizer',
 	'required' => TRUE,
 	'passed' => extension_loaded('tokenizer'),
