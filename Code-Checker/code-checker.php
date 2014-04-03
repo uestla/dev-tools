@@ -6,7 +6,9 @@
  * This file is part of the Nette Framework (http://nette.org)
  */
 
-require __DIR__ . '/../../Nette-minified/nette.phar';
+if (@!include __DIR__ . '/../vendor/autoload.php') {
+	die('Install packages using `composer update`');
+}
 
 use Nette\Utils\Strings;
 
